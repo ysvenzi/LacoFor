@@ -6,7 +6,26 @@
         xmlns:local="clr-namespace:LacoFor"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#1E293B">
+        <StackPanel Width="580" VerticalAlignment="Center"> <!-- Grupo principal -->
+            <StackPanel Background="#0F172A" Margin="0 0 0 24"> <!-- Grupo cabeçalho -->
+                <TextBlock Text="Seu saldo:" Foreground="#94A3B8" FontWeight="Bold" FontSize="12" Margin="16 16 16 0" />
+                <TextBlock Text="R$0,00" Foreground="#34D399" FontWeight="Bold" FontSize="30" Margin="16 0 16 0" />
+            </StackPanel>
 
+            <StackPanel Background="#0F172A"><!-- Grupo aposta -->
+                <TextBlock x:Name="tbResultado" Text="0" Foreground="#94A3B8" FontSize="20" Margin="16 16 16 0" />
+                <StackPanel Orientation="Horizontal" Margin="16 0"> <!-- Grupo giros -->
+                    <TextBlock Text="Quantidade de giros: " Foreground="#94A3B8" FontWeight="Bold" FontSize="20" />
+                    <TextBox Text="1" FontSize="20" x:Name="tbQuantidade" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="16 0"> <!-- Grupo custo total -->
+                    <TextBlock Text="Custo total: " Foreground="#94A3B8" FontWeight="Bold" FontSize="20" />
+                    <TextBlock Text="R$10,00" Foreground="#94A3B8" Margin="7,0,0,0" FontSize="20" />
+                </StackPanel>
+                <Button Content="Confirmar Sorteio" Background="#F59E0B" FontSize="20" Foreground="#0F172A"
+                        FontWeight="Bold" Width="480" Height="56" Margin="10" Click="BotaoSorteio_OnClick" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

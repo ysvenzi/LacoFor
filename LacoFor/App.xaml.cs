@@ -10,4 +10,3 @@ namespace LacoFor;
 public partial class App : Application
 {
 }
-
